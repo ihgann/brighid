@@ -1,0 +1,5 @@
+<% if not user_signed_in? %>
+  <h1>We should have a login form in the beginning.</h1>
+<% else %>
+  <h1>Hey, <%= current_user.email %></h1>
+<% end %>
