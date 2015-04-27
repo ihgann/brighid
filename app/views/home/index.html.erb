@@ -3,5 +3,11 @@
   $$\checkmark$$
   <p>The summation from 1 to n is n(n+1)/2, or in LaTeX, $\sum_{i=0}^n i = \frac{n(n+1)}{2}$</p>
 <% else %>
-  <h1>Hey, <%= current_user.email %></h1>
+  <h2>Courses</h2>
+  <%= link_to "New Course", new_course_path %>
+  <ul>
+  <% @courses.each do |course| %>
+    <li><%= link_to course.name, course %></li>
+  <% end %>
+  </ul>
 <% end %>
