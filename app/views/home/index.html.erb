@@ -1,5 +1,7 @@
 <% if not user_signed_in? %>
   <h1>We should have a login form in the beginning.</h1>
+  $$\checkmark$$
+  <p>The summation from 1 to n is n(n+1)/2, or in LaTeX, $\sum_{i=0}^n i = \frac{n(n+1)}{2}$</p>
 <% else %>
   <h1>Hey, <%= current_user.email %></h1>
 <% end %>
