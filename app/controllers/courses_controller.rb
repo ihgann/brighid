@@ -16,6 +16,9 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
+    if user_signed_in?
+      @notes = Note.where(user_id:current_user.id, class_id:@course.id)
+    end
   end
 
   private

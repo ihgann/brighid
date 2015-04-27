@@ -1,0 +1,8 @@
+<%= simple_form_for @note do |n| %>
+  <%= n.input :name %>
+  <%= n.input :content, as: :text %>
+  <% if (defined? @course) %>
+    <%= hidden_field_tag :class_id, @course.id %>
+  <% end %>
+  <%= n.button :submit %>
+<% end %>

@@ -1,3 +1,9 @@
 <h2><%= @course.name %></h2>
 <h3>Instructor: <%= @course.instructor %></h3>
-<p>Notes</p>
+<p>Notes <%= link_to "+", new_note_path(:course => @course.id) %></p>
+<ul>
+<% @notes.each do |note| %>
+  <li><%= link_to note.name, note %></li>
+<% end %>
+</ul>
+
