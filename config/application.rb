@@ -24,6 +24,6 @@ module NotesApp
     config.assets.precompile += %w( vendor/modernizr )
 
     # Site Global Variables
-    config.site_title = "Minimal"
+    config.site_title = "Brighid"
   end
 end

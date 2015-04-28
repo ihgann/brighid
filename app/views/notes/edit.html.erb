@@ -1,5 +1,5 @@
 <div class="row">
-  <h2 class="title">New Note</h2>
+  <h2 class="title">Edit Note</h2>
   <div class="large-4 columns right">
     <% if defined?(@course) %>
       <p style="margin-top: 20px; margin-bottom: -10px; text-align: right;"><%= link_to @course.name, @course %></p> 
@@ -18,3 +18,10 @@
     <%= n.button :submit %>
   <% end %>
 </div>
+
+<div class="row">
+  <h3>Unhappy with this note?</h3>
+  <p>You may delete it - but remember, there is no turning back from here!</p>
+    <%= button_to "Delete Note", note_path(@note), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button b2' %>
+</div>
+

@@ -17,6 +17,25 @@ class CoursesController < ApplicationController
       redirect_to new_course_path
     end
   end
+  
+  def edit
+    @course = Course.find(params[:id])
+  end
+
+  def update
+    @course = Course.find(params[:id])
+    
+    if @course.update(course_params)
+      redirect_to @course
+    else
+      render edit_course_path
+    end
+  end
+
+  def destroy
+    Course.delete(params[:id])
+    redirect_to root_path
+  end
 
   def show
     @course = Course.find(params[:id])
