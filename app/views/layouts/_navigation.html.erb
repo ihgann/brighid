@@ -1,15 +1,18 @@
-<div id="header" class="row">
-  <div class="left large-4 columns">
-    <%= link_to "Notes", root_path, id: "text-logo" %>
-  </div>
-  <div class="large-4 columns" style="text-align: right;">
-    <ul id="navlinks">
-      <% if user_signed_in? %>
-        <li><%= link_to 'Edit account', edit_user_registration_path %> - </li>
-        <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
-      <% else %>
-        <li><%= link_to 'Sign in', new_user_session_path %></li>
-      <% end %> 
-    </ul>
+<div id="header">
+  <div class="row">
+    <div class="left large-8 columns">
+      <%= link_to Rails.application.config.site_title, root_path, id: "text-logo" %>
+    </div>
+    <div class="large-4 columns">
+      <ul id="navlinks">
+        <% if user_signed_in? %>
+          <li><%= link_to 'Courses', courses_path %> - </li>
+          <li><%= link_to 'Edit account', edit_user_registration_path %> - </li>
+          <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+        <% else %>
+          <li><%= link_to 'Sign in', new_user_session_path %></li>
+        <% end %> 
+      </ul>
+    </div>
   </div>
 </div>

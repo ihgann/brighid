@@ -1,4 +1,6 @@
-<div class="authform">
+<div class="row">
+  <div class="large-12 columns">
+    <div class="authform" style="width: 50%; margin: 0 auto;">
   <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :role => 'form'}) do |f| %>
     <h3>Forgot your password?</h3>
     <p>We'll send password reset instructions.</p>
@@ -9,4 +11,6 @@
     </div>
      <%= f.submit 'Reset Password', :class => 'button right' %>
   <% end %>
+</div>
+</div>
 </div>

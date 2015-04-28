@@ -42,7 +42,7 @@ group :development do
   gem 'rails_layout'
 end
 
-gem 'annotate'
+gem 'annotate', group: :development
 gem 'foundation-rails'
 gem 'redcarpet'
 gem 'coderay'

@@ -15,20 +15,27 @@
  */
 
 #header {
-  margin-top: 20px;
-  text-align: left;
+  background-color: #028482;
+  width: 100%;
 }
+
+#footer {
+  background-color: #2b2b2b;
+  color: white;
+  width: 100%;
+}
+
 
 
 #text-logo {
   letter-spacing: 0.075em;
-  color: #028482;
   font-size: 60px;
   font-weight: bold;
-  text-transform: lowercase;
+  /*text-transform: lowercase; */
   font-family: "Times New Roman", Times, serif;
   padding: 0px;
   margin: 0px;
+  color: white;
   text-decoration: none;
 }
 
@@ -40,22 +47,28 @@
 
 #navlinks li {
   display: inline;
-  color: #006400;
 }
 
 #navlinks li a {
-  color: gray;
+  color: white;
   text-decoration: none;
+  padding: 0.2em;
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  /* ...and now for the proper property */
+  transition:.2s;
 }
 
-#navlinks li a:hover {
-  text-decoration: none;
+#navlinks li a:hover 
+{
+  background-color: white;
+  color: #028482; 
 }
 
 .content {
   width: 67%;
-  margin: 0 auto;
-  margin-top: 20px;
 }
 
 .title {
@@ -74,3 +87,42 @@ hr {
   margin-left: 9px;
   display: inline;
 }
+
+a {
+  color: #028482; 
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+
+a:hover {
+  color: gray;
+  }
+
+
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+height: 100%;
+margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+margin-top: 20px;
+}
+#footer, .push {
+height: 100px; /* .push must be the same height as .footer */
+}
+
+/*
+
+Sticky Footer by Ryan Fait
+http://ryanfait.com/
+
+*/

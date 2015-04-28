@@ -12,7 +12,7 @@ class NotesController < ApplicationController
     @note.user_id = current_user.id
     @note.class_id = params[:class_id]
     if @note.save
-      redirect_to root_path
+      redirect_to @note
     else
       redirect_to new_note_path
     end
@@ -20,6 +20,7 @@ class NotesController < ApplicationController
 
   def show
     @note = Note.find(params[:id])
+    @course = Course.where(["id = ?", @note.class_id])[0]
   end
 
   private

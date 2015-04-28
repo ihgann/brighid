@@ -23,5 +23,7 @@ module NotesApp
     # For Foundation 5
     config.assets.precompile += %w( vendor/modernizr )
 
+    # Site Global Variables
+    config.site_title = "Minimal"
   end
 end

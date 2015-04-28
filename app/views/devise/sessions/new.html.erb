@@ -1,4 +1,6 @@
-<div class="authform">
+<div class="row">
+  <div class="large-12 columns">
+    <div class="authform" style="width: 40%; margin: 0 auto;">
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f| %>
     <h3>Sign in</h3>
     <%= devise_error_messages! %>
@@ -25,4 +27,6 @@
         </div>
       <% end -%>
   <% end %>
+</div>
+</div>
 </div>
