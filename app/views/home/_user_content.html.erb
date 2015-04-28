@@ -1,14 +1,13 @@
 <div class="row">
   <h2 class="title">Courses</h2>
+  <h2 class="new_link"><%= link_to "+", new_course_path %></h2>
 </div>
 <hr />
 
 <div class="row">
-  <div class="large-8 columns">
-  <ul>
   <% @courses.each do |course| %>
-    <li><%= link_to course.name, course %></li>
+    <div class="large-3 columns left">
+      <%= link_to course.name, course, class:"button large" %>
+    </div>
   <% end %>
-  </ul>
-  </div>
 </div>
