@@ -1,12 +1,15 @@
-<%# navigation styled for Zurb Foundation 5 %>
-<nav class="top-bar" data-topbar>
-  <ul class="title-area">
-    <li class="name"><%= link_to 'Home', root_path %></li>
-    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-  </ul>
-  <div class="top-bar-section right">
-    <ul>
-      <%= render 'layouts/navigation_links' %>
+<div id="header" class="row">
+  <div class="left large-4 columns">
+    <%= link_to "Notes", root_path, id: "text-logo" %>
+  </div>
+  <div class="large-4 columns" style="text-align: right;">
+    <ul id="navlinks">
+      <% if user_signed_in? %>
+        <li><%= link_to 'Edit account', edit_user_registration_path %> - </li>
+        <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+      <% else %>
+        <li><%= link_to 'Sign in', new_user_session_path %></li>
+      <% end %> 
     </ul>
   </div>
-</nav>
+</div>

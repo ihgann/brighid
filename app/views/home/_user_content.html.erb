@@ -1,0 +1,14 @@
+<div class="row">
+  <h2 class="title">Courses</h2>
+</div>
+<hr />
+
+<div class="row">
+  <div class="large-8 columns">
+  <ul>
+  <% @courses.each do |course| %>
+    <li><%= link_to course.name, course %></li>
+  <% end %>
+  </ul>
+  </div>
+</div>
