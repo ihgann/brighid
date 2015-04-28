@@ -1,2 +1,7 @@
-<%= @note.name %>
-<%= @note.content %>
+<div class="row">
+  <h2 class="title"><%= @note.name %></h2>
+</div>
+<hr />
+<div class="row">
+  <%= markdown(@note.content) %>
+</div>
