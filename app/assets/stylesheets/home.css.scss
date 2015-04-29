@@ -3,34 +3,66 @@
   background-color: #028482;
 }
 
-.b0, .b11 {
-  background-color: #966630;
+.button:hover
+{
+  background-color: #016361;
 }
 
+.b0, .b11 {
+  background-color: #3f3f3f;
+}
+
+.b0:hover, .b0:focus, .b11:hover, .b11:focus {
+  background-color: #2a2a2a;
+  }
+
 .b1, .b10 {
-  backgorund-color: #963060;
 }
 
 .b2, .b9 {
   background-color: #a8120e;
 }
 
+.b2:hover, .b2:focus, .b9:hover, .b9:focus {
+  background-color: #7e0d0a;
+  }
+
 .b3, .b8 {
   background-color: #008cba;
 }
+
+.b3:hover, .b3:focus, .b8:hover, .b8:focus {
+  background-color: #00698b;
+  }
 
 .b4, .b15 {
   background-color: #663096;
 }
 
+.b4:hover, .b4:focus, .b15:hover, .b15:focus {
+  background-color: #3f1e5d;
+  }
+
 .b5, .b14 {
   background-color: #309666;
   }
 
+.b5:hover, .b5:focus, .b14:hover, .b14:focus {
+    background-color: #24704c;
+}
+
 .b6, .b13 {
-  background-color: #464646;
+  background-color: #963060;
+}
+
+.b6:hover, .b6:focus, .b13:hover, .b13:focus {
+    background-color: #702448;
 }
 
 .b7, .b12 {
   background-color: #d98316;
+}
+
+.b7:hover, .b7:focus, .b12:hover, .b12:focus {
+    background-color: #a26210;
 }

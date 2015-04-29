@@ -14,15 +14,14 @@
  *= require_self
  */
 
+@import 'foundation-icons';
+
 #header {
   background-color: #028482;
   width: 100%;
 }
 
-#footer {
-  background-color: #2b2b2b;
-  color: white;
-  width: 100%;
+.site-footer {
 }
 
 * {
@@ -94,18 +93,35 @@ hr {
 
 a {
   color: #028482; 
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
+  padding: 0.2em;
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
   /* ...and now for the proper property */
-  transition:.5s;
+  transition:.2s;
 }
 
 a:hover {
-  color: gray;
+  background-color: #028482;
+  color: white; 
   }
 
+.embedded a {
+  color: #016361; 
+  padding: 0px;
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  /* ...and now for the proper property */
+  transition:.2s;
+}
+
+.embedded a:hover {
+  background-color: inherit;
+  color: #464646; 
+  }
 
 * {
 margin: 0;
@@ -113,20 +129,68 @@ margin: 0;
 html, body {
 height: 100%;
 }
-.wrapper {
-min-height: 100%;
-height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
-height: 100%;
-margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+
+.page-wrap {
+min-height: calc(100% - 110px);
+/* equal to footer height */
+margin: 0 auto;
+margin-bottom: -92px;
 margin-top: 20px;
+padding-bottom: 2em;
 }
-#footer, .push {
-height: 100px; /* .push must be the same height as .footer */
+.page-wrap:after {
+content: "";
+display: block;
 }
 
-/*
+.site-footer, .page-wrap:after {
+  height: 92px; 
+}
+.site-footer {
+  padding-top: 1em;
+  background-color: #464646;
+  color: white;
+  width: 100%;
+}
 
-Sticky Footer by Ryan Fait
-http://ryanfait.com/
+.site-footer ul li
+{
+  font-size: 14px;
+}
 
-*/
+
+
+#error_explanation
+{
+  font-size: 20px;
+}
+
+#error_explanation ul li
+{
+  font-size: 16px;
+  color: #800000;
+}
+
+#error_explanation h2 
+{
+  font-size: 13px;
+  display: none;
+}
+
+.site-footer a
+{
+  color: white;
+  padding: 0px;
+  -o-transition:.4s;
+  -ms-transition:.4s;
+  -moz-transition:.4s;
+  -webkit-transition:.4s;
+  /* ...and now for the proper property */
+  transition:.4s;
+}
+
+.site-footer a:hover
+{
+  background-color: inherit;
+  color: gray;
+}

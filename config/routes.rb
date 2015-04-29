@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :courses
   resources :notes
+  get "about" => "home#about"
 end

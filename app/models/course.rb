@@ -13,4 +13,5 @@
 class Course < ActiveRecord::Base
   belongs_to :user
   has_many :notes
+  validates :user_id, :name, presence: true
 end

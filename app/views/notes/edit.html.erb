@@ -8,20 +8,24 @@
 </div>
 <hr />
 
-<div style="width: 80%;">
-  <%= simple_form_for @note do |n| %>
-    <%= n.input :name, :input_html => {:style => 'width: 50%;'} %>
-    <%= n.input :content, as: :text, :input_html => {:style => 'width: 90%; height: 350px;'} %>
-    <% if (defined? @course) %>
-      <%= hidden_field_tag :class_id, @course.id %>
+<div class="row">
+  <div class="large-8 columns">
+    <%= simple_form_for @note do |n| %>
+      <%= n.input :name, :input_html => {:style => 'width: 50%;'} %>
+      <%= n.input :content, as: :text, :input_html => {:style => 'height: 350px;'} %>
+      <% if (defined? @course) %>
+        <%= hidden_field_tag :class_id, @course.id %>
+      <% end %>
+      <%= n.button :submit %>
     <% end %>
-    <%= n.button :submit %>
-  <% end %>
+  </div>
 </div>
 
 <div class="row">
-  <h3>Unhappy with this note?</h3>
-  <p>You may delete it - but remember, there is no turning back from here!</p>
+  <div class="large-10 columns">
+    <h3>Unhappy with this note?</h3>
+    <p>You may delete it - but remember, there is no turning back from here!</p>
     <%= button_to "Delete Note", note_path(@note), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button b2' %>
+</div>
 </div>
 

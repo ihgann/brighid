@@ -4,4 +4,8 @@ class HomeController < ApplicationController
       @courses = Course.where(user_id:current_user.id)
     end
   end
+
+  def about
+
+  end
 end
