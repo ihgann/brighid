@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: "home#index"
   # devise_for :users
   devise_for :users, controllers: { registrations: 'registrations', :omniauth_callbacks => "users/omniauth_callbacks" }
+  get '/users/auth/facebook/callback', to: redirect('/accounts/auth/facebook/callback')
   resources :courses
   resources :notes
   get "about" => "home#about"
