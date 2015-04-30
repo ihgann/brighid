@@ -47,5 +47,3 @@ gem 'redcarpet'
 gem 'coderay'
 gem 'simple_form'
 gem 'devise'
-
-ruby "2.1.2"
