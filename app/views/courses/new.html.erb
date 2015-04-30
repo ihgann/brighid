@@ -9,7 +9,9 @@
 <div style="width: 80%; text-align: left;">
 <%= simple_form_for @course do |c| %>
   <%= c.input :name, :input_html => {:style => 'width: 50%;'} %>
+  <%= c.input :school, :input_html => {:style => 'width: 50%;'} %>
   <%= c.input :instructor, :input_html => {:style => 'width: 50%;'} %>
+  <%= c.input :semester, :input_html => {:style => 'width: 50%;'} %>
   <%= c.button :submit %>
 <% end %>
 </div>

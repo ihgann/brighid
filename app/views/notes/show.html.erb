@@ -1,11 +1,26 @@
-<div class="row">
-  <h2 class="title"><%= @note.name %></h2>
-  <div class="large-6 columns right">
-    <p style="margin-top: 20px; margin-bottom: -10px; text-align: right;"><%= link_to "Edit note", edit_note_path(@note) %> - <%= link_to @course.name, @course %></p> 
+<div class="row" style="white-space: nowrap; overflow: hidden; text-overflow: clip;">
+  <div class="large-8 columns" style="white-space: nowrap; overflow: hidden; text-overflow: clip;"> 
+    <h2 class="title"><%= @note.name %></h2>
+  </div>
+  <div class="large-4 columns right">
+    <p style="margin-top: 20px; margin-bottom: -10px; text-align: right;"><%= link_to "Edit note", edit_note_path(@note) %></p> 
   </div>
 </div>
 <hr />
 
-<div class="row markdown">
-  <%= markdown(@note.content) %>
+<div class="right" style="display: inline; align: right; padding-left: 2em; padding-bottom: 2em;">
+    <ul class="right" style="list-style-type: none;">
+      <li style="margin-bottom: -15px;">
+        <h4>Note Info</h4> 
+        <hr />
+      </li>
+      <li>Course: <%= link_to @course.name, @course %></li>
+      <li>Author: <span style="padding-left: 0.2em"><%= @author.email %></span></li>
+    </ul>
+  </div>
+
+<div class="row">
+  <div class="markdown">
+    <%= markdown(@note.content) %>
+  </div>
 </div>

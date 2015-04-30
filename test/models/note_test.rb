@@ -4,7 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  user_id    :integer
-#  class_id   :integer
+#  course_id  :integer
 #  name       :string(255)
 #  content    :text
 #  created_at :datetime

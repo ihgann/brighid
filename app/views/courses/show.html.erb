@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="large-8 columns">
+  <div class="large-8 columns" style="white-space: nowrap; overflow: hidden; text-overflow: clip;">
     <h2 class="title"><%= @course.name %></h2>
   </div>
   <div class="large-4 columns right">
@@ -12,22 +12,41 @@
 
 <div class="row">
   <div class="large-8 columns">
-    <h4>Notes</h4>
+    <div class="row">
+      <div class="large-12 columns">
+        <h4>Notes</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <% if defined?(@notes) %>
+          <% if @notes.count == 0 %>
+            <p>You have no notes yet. <%= link_to "Add one!", new_note_path(:course => @course.id) %></p> 
+          <% else %>
+            <ul class="inline-list">
+            <% @notes.each do |note| %>
+              <li><%= link_to note.name, note %></li>
+            <% end %>
+          <% end %>
+        <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
-</div>
-
-<div class="row">
-  <div class="large-8 columns">
-    <ul class="inline-list">
-    <% @notes.each do |note| %>
-      <li><%= link_to note.name, note %></li>
+  <div class="large-4 columns" style="padding-left: 2em; padding-bottom: 2em;">
+    <ul class="right" style="list-style-type: none;">
+      <li style="padding-left: 0.2em; margin-bottom: -15px;">
+        <h4>Course Info</h4> 
+        <hr />
+      </li>
+    <% if not @course.school.empty?  %>
+      <li style="padding-left: 0.2em">School: <%= @course.school %></li>
     <% end %>
-    </ul>
-  </div>
-  <div class="large-4 columns">
-    <ul>
     <% if not @course.instructor.empty? %>
       <li style="padding-left: 0.2em">Instructor: <%= @course.instructor %></li>
+    <% end %>
+    <% if not @course.semester.empty? %>
+      <li style="padding-left: 0.2em">Semester: <%= @course.semester %></li>
     <% end %>
     <li><%= link_to "Add a new note", new_note_path(:course => @course.id) %></li> 
     </ul>

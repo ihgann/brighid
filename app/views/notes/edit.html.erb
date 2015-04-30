@@ -14,7 +14,7 @@
       <%= n.input :name, :input_html => {:style => 'width: 50%;'} %>
       <%= n.input :content, as: :text, :input_html => {:style => 'height: 350px;'} %>
       <% if (defined? @course) %>
-        <%= hidden_field_tag :class_id, @course.id %>
+        <%= hidden_field_tag :course_id, @course.id %>
       <% end %>
       <%= n.button :submit %>
     <% end %>

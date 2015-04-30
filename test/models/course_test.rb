@@ -8,6 +8,8 @@
 #  instructor :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  semester   :string(255)
+#  school     :string(255)
 #
 
 require 'test_helper'
