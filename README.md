@@ -2,7 +2,7 @@
 
 **Team Members**: Ian Gann, Ayush Mudgal
 
-**Demo Link**:
+**Demo Link**: [Brighid Live](https://evening-oasis-9876.herokuapp.com/)
 
 **Idea**: An application that allows users to create notes organized by course. Each note is allowed to be written in Markdown with embedded LaTeX and syntax highlighting for most languages.
 
