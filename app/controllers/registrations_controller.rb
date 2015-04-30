@@ -6,6 +6,10 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     # add custom create logic here
     super
+    make_default
+  end
+
+  def make_default
     c = Course.create(user_id: @user.id, name: "Tutorials", school: "", instructor: "Ian Gann", 
       semester: "");
     Note.create(user_id: @user.id, course_id: c.id, name: "Markdown Tutorial",

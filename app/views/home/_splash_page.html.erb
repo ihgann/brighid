@@ -34,8 +34,24 @@
        <% end %>
      </div>
    </div>
+   
    <div class="row">
-     <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+     <div class="large-5 columns">
+       <hr />
+     </div>
+     <div class="large-2 columns" style="text-align: center;">
+       <p style="color: gray; margin-top: -12px;">or</p>
+     </div>
+     <div class="large-5 columns">
+       <hr />
+     </div>
+   </div>
+   <div class="row" style="text-align: right;">
+     <p class="fblink" style="font-size:55px; margin-top: -25px;">
+     <%= link_to user_omniauth_authorize_path(:facebook) do %>
+       <i class="fi-social-facebook"></i>
+       </p>
+   <% end %>
    </div>
   </div>
 </div>
