@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
     if user_signed_in?
-      @courses = Course.where(user_id:current_user.id)
+      @courses = Course.where(user_id:current_user.id).order('created_at DESC')
     end
   end
 
