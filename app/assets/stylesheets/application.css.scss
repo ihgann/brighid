@@ -16,6 +16,16 @@
 
 @import 'foundation-icons';
 
+@font-face {
+  font-family: "foundation-icons";
+  src: font-url( "foundation-icons.eot" );
+  src: font-url( "foundation-icons.eot?#iefix" ) format("embedded-opentype"),
+  font-url( "foundation-icons.woff" ) format("woff"),
+  font-url( "foundation-icons.ttf" ) format("truetype"),
+  font-url( "foundation-icons.svg#fontcustom" ) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 #header {
   background-color: #028482;
   width: 100%;
