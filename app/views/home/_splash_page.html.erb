@@ -12,6 +12,7 @@
     <p>You can have it all. Sign up today.</p>
   </div>
   <div class="large-5 columns">
+    <div class="row">
     <div class="authform">
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => 
                    { :role => 'form'}) do |f| %>
@@ -32,5 +33,9 @@
          <%= f.submit 'Sign up', :class => 'button right' %>
        <% end %>
      </div>
+   </div>
+   <div class="row">
+     <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+   </div>
   </div>
 </div>
