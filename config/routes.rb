@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post '/users/auth/facebook/callback' => 'registrations#make_default' 
   resources :courses
   resources :notes
+  get 'notes/:id/download' => 'notes#download'
+
   get "about" => "home#about"
   get "terms-of-service" => "home#terms_of_service"
   get "privacy-policy" => "home#privacy_policy"

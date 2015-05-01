@@ -1,0 +1,14 @@
+<%= javascript_include_tag "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" %>
+<script type="text/javascript">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+  }
+});
+</script>
+<h1><%= @note.name %></h1>
+<hr />
+<div class="markdown">
+  <%= markdown(@note.content) %>
+</div>
+

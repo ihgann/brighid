@@ -25,5 +25,6 @@ module NotesApp
 
     # Site Global Variables
     config.site_title = "Brighid"
+    config.autoload_paths << Rails.root.join('lib')
   end
 end
