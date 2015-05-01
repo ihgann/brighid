@@ -14,9 +14,9 @@
         <h4>Note Info</h4> 
         <hr />
         </li>
-        <li><%= link_to "Download as pdf", "#{@note.id}/download", :target => "_blank" %></li>
       <li>Course: <%= link_to @course.name, @course %></li>
       <li>Author: <span style="padding-left: 0.2em"><%= @author.email %></span></li>
+      <li><span style="margin-left: -0.2em"><%= link_to "Download as pdf", "#{@note.id}/download", :target => "_blank" %></span></li>
     </ul>
   </div>
 
